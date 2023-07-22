@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="Signup page of infinity store" />
+    <meta name="keywords" content="Infinity store, mobiles, iphone, samsung" />
+    <meta name="author" content="Arbaaz Alam" />
+    <meta http-equiv="refresh" content="40">
+    <link rel="stylesheet" type="text/css" href="all.css">
+    <title>signup</title>
+
+  	<style type="text/css">
+        .containerd{
+        height: 700px;
+        width: 100%;
+        margin: 0px 0px;
+        }
+      .page{/* This class helps give the following things to form tag*/
+        height: 600px; 
+        width: 350px;
+        box-sizing: border-box;
+        overflow: hidden;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-right: 200px;
+      }
+      .form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+      }
+      .box{/* This class helps give the following things label tag*/
+        height: 30px;
+        width: 280px;
+        border-radius: 4px;
+        margin-top: 5px;
+        opacity: 0.7;
+
+      }
+      .text{/* This class helps give the following things to input tag*/
+        font-size: 14px;
+        font-weight: bold;
+        opacity: 0.7;
+      }
+      img{/* The the image tag is given 100% width and height using this*/
+        height: 100%;
+        width: 100%;
+      }
+      .box1{/* the class is created for the submit box*/
+        background-color: black; 
+        color: white; 
+        border: 2px solid black;
+        opacity: 0.8;
+        border-radius: 20px; 
+        height: 40px;
+        width: 300px;
+        transition: 0.4s;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .box1:hover{/* the class is created and hover effect is given to the submit box*/
+        background-color: white;
+        color: black;
+      }
+      .alert {
+        padding: 20px;
+        background-color: #393737;
+        color: white;
+        opacity: 1;
+        transition: opacity 0.6s;
+        margin-bottom: 15px;
+        height: 20px;
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .alert.success {background-color: #4CAF50;}
+      .alert.info {background-color: #2196F3;}
+      .alert.warning {background-color: #ff9800;}
+
+      .closebtn {
+          margin-left: 15px;
+          color: white;
+          font-weight: bold;
+          float: right;
+          font-size: 22px;
+          line-height: 20px;
+          cursor: pointer;
+      }
+
+      .closebtn:hover {
+          color: black;
+      }
+    </style>
+    </head>
+  <body>
+    <!-- The below div is the main div or container div of the webpage-->
+    <div class="containerd">
+      <!-- The below div is div for navigation bar for the webpage-->
+      <nav class="navbar">
+        <!-- Inside the navigation div there are three div in which first used for logo, second one for nav bar of pages and third for icons-->
+        <div class="logo"><!-- logo is inserted here-->
+            <a href="homepage.html"><img src="image/a.png"></a>
+        </div>
+        <div class="table">
+            <!--Using table tag the four page are created in one row-->
+            <table>
+                <tr>
+                    <th><a href="homelogin.html" class="current"> Home</th>
+                    <th><a href="">Book Cab</th>
+                    <th><a href="">Hire Vehicle</th>
+                    <th><a href="">Join Traning Course</th>
+                    <th><a href="">About Us</th>
+                    
+                </tr>
+            </table>
+        </div>
+
+        <!--Using this div icon are inserted to signup, when signup icon is clicked it will link to sigup page-->
+        <div class="icon">
+            <div class="iconimg">
+                <a href=""><img src="image/search.png"></a>
+            </div>
+            <div class="iconimg">
+                <a href="html/signup.html"><img src="image/signup.png"></a>
+            </div>
+        </div>
+    </nav>
+      <!--Using this div the form kept at center-->
+      <div class="alert" style="display: none;" id="div2">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p style="text-align: center;">Please fill all the fields correctly.</p>
+      </div>      
+      <div class="form">
+        <div style="height: 300px; width: 300px; margin-left: 200px; margin-top: -100px;">
+           <img src="image/a.png">
+           <p style="font-size: 22px; margin-left: 50px;">Transportation Company</p>
+        </div>
+         <!--Using form tag a form is created, the form input are kept inside a div and it will be submitted after filling, and there is also option if user is already signed in then they can sign in-->
+          <div class="page" name="messageForm">
+            <div style=" margin-left: 20px;">
+              <h2 style="margin-top: 20px;">Create account</h2>
+              <br><label class="text">Username </label><br>
+              <input class="box" type="text" id="nam" required><br><br>
+              <label class="text">Email</label><br>
+              <input class="box" type="text" id="email" required><br><br>
+              <label class="text">Phone Number</label><br>
+              <input class="box" type="text" id="phone" required><br><br>
+              <label class="text">Password</label><br>
+              <input class="box" type="password" id="pass" placeholder="Please enter aleast 6 charaters" required><br><br>
+              <label class="text">Re-enter password</label><br>
+              <input class="box" type="password" id="rpass" required><br><br><br>
+              <input class="box1" type="submit" value="Submit" onclick="myfunc()">
+            </div>
+            <hr style=" margin-top: 40px; width: 50%; margin-left: 70px;">
+            <p style=" margin-top: 10px; margin-left: 45px;">Already have an account? <a href="signin.html"><span style="color: darkblue;">Sign in</span></a></p>
+          </div>
+        </div>
+      <!--Using javascript the form validation is checked, the variable are get from forms, then if either of field is empty, empty message is popup or thank you message is popup-->
+    </div> 
+    <script>
+      function myfunc(){
+          if (document.getElementById("nam").value == "" || document.getElementById("email") == "" || document.getElementById("phone").value == "" || document.getElementById("pass") == "" || document.getElementById("rpass") == "")
+            {
+              var x = document.getElementById("div2");
+              x.style.display="block";
+            }
+          else{
+            window.location.href="signin.html";
+          }
+        }
+  </script>
+  </body>
+</html>

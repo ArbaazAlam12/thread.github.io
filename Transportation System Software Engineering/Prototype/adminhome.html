@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='all.css'>
+    <script src='main.js'></script>
+    <style>
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }   
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .iconimg {opacity: 0.7;}
+        .car1{
+            height: 550px;
+	        width: 100%;
+	        background-image: url("image/mm.jpg");
+	        background-size:  contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <!-- Inside the navigation div there are three div in which first used for logo, second one for nav bar of pages and third for icons-->
+            <div class="logo"><!-- logo is inserted here-->
+                <a href="adminhome.html"><img src="image/a.png"></a>
+            </div>
+            <div class="table">
+                <!--Using table tag the four page are created in one row-->
+                <table  style="margin-left: 200px;"> 
+                    <tr>
+                        <th><a href="registerstaff.html" class="current"> Register Staff</th>
+                        <th><a href="registervehicle.html">Register Vehicle</th>
+                        <th><a href="data.html">Data Analyze</th>
+                        
+                    </tr>
+                </table>
+            </div>
+
+            <!--Using this div icon are inserted to signup, when signup icon is clicked it will link to sigup page-->
+            <div class="icon">
+                <div class="iconimg">
+                    <a href=""><img src="image/search.png"></a>
+                </div>
+                <div  class="dropdown">
+                    <div class="iconimg">
+                        <a href="html/signup.html"><img src="image/signup.png"></a>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="signin.html">Logout</a>
+                    </div>
+            </div>
+        </nav>
+</div>
+<div class="main">
+    <div class="car1">
+        <p class="aa">Welcome to Admin Page</p>
+    </div>
+    <div class="parts">
+        <div class="is" style="background-image: url(image/hh.jpg);">
+            <div class="text1">
+                <a href="registerstaff.html"><p style="color: white;">Register Staff</p></a>
+            </div>
+        </div>
+        <div class="is" style="background-image: url(image/ii.png);">
+            <div class="text1">
+                <a href="registervehicle.html"><p style="color: white;">Register Vehicle</p></a>
+            </div>
+        </div>
+        <div class="is" style="background-image: url(image/jj.jpg);">
+            <div class="text1">
+                <a href="signin.html"><p p style="color: white;">Data Analyze</p></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dic">
+    <footer style="margin-top: -400px;">
+        <div style="height: 100px; width: 100%;">
+            <div style="height: 40px; width: 30%; float: left; margin-left: 30px; margin-top: 10px;">
+                <p style="font-size: 12px;">Copyright &copy</p><br>
+                <p style="font-size: 12px";> All rights reserved </p>
+            </div>
+            <div align="center" style="height: 100px; width: 30%; float: left; margin-left: 30px; margin-top: 10px;">
+                <p style="font-size: 14px; font-weight: bold;">About Us</p>
+                <p style="font-size: 12px; margin-top: 10px">Privacy Policy</p>
+                <p style="font-size: 12px; margin-top: 5px">Terms & Condition</p>
+                <p style="font-size: 12px; margin-top: 5px">Help</p>
+            </div>
+            <div align="right" style="height: 40px; width: 30%; float: right; margin-left: 30px; margin-top: 10px; margin-right: 20px;">
+                <p style="font-size: 14px; margin-top: 5px; font-weight: bold;">Contact Us</p>
+                <p style="font-size: 12px; margin-top: 10px;">Phone Number: 9818613211</p>
+                <p style="font-size: 12px; margin-top: 5px;">Address: Sorakhutte, Kathmandu</p>
+                <p style="font-size: 16px; margin-right: 15px; margin-bottom: 5px; margin-top: 10px;">Visit us</p>
+                <div style="height: 20px; width: 5%; float: right; margin-right: 10px;">
+                    <a href=""><img src="image/fac.png"></a>
+                </div>
+                <div style="height: 20px; width: 5%; float: right; margin-left: 10px; margin-right: 5px;">
+                    <a href=""><img src="image/insta.png"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

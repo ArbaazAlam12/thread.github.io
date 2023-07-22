@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='all.css'>
+    <script src='main.js'></script>
+    <style>
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }   
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .iconimg {opacity: 0.7;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <!-- Inside the navigation div there are three div in which first used for logo, second one for nav bar of pages and third for icons-->
+            <div class="logo"><!-- logo is inserted here-->
+                <a href="adminhome.html"><img src="image/a.png"></a>
+            </div>
+            <div class="table">
+                <!--Using table tag the four page are created in one row-->
+                <table  style="margin-left: 200px;"> 
+                    <tr>
+                        <th><a href="registerstaff.html" class="current"> Register Staff</th>
+                        <th><a href="registervehicle.html">Register Vehicle</th>
+                        <th><a href="">Data Analyze</th>
+                        
+                    </tr>
+                </table>
+            </div>
+
+            <!--Using this div icon are inserted to signup, when signup icon is clicked it will link to sigup page-->
+            <div class="icon">
+                <div class="iconimg">
+                    <a href=""><img src="image/search.png"></a>
+                </div>
+                <div  class="dropdown">
+                <div class="iconimg">
+                    <a href="html/signup.html"><img src="image/signup.png"></a>
+                </div>
+                <div class="dropdown-content">
+                    <a href="signin.html">Logout</a>
+                </div>
+            </div>
+            </div>
+        </nav>
+</div>
+<div class="main">
+    <div style="height: 500px; width: 1200px; margin-left: auto; margin-right: auto; margin-top: 30px;">
+        <h2 style="opacity: 0.7; margin-left: 500px;">Driver Score</h2>
+        <img style="height: 400px; width: 1000px; margin-left: 100px;" src="image/kk.png">
+    </div>
+    <div style="height: 500px; width: 1200px; display: flex; justify-content: space-evenly;">
+        <div>
+            <h2 style="opacity: 0.7; margin-left: 500px;">Book/Hire Data</h2>
+            <img style="height: 420px; width: 700px; margin-left: 300px;" src="image/ff.png">
+        </div>
+        <div>
+            <h2 style="opacity: 0.7; margin-left: 300px;">Vehicle data</h2>
+
+            <img style="height: 470px; width: 600px; margin-left: 100px;" src="image/vv.png">
+        </div>
+    </div>
+    <div style="height: 500px; width: 1200px; margin-left: auto; margin-right: auto; margin-top: 30px;">
+        <h2 style="opacity: 0.7; margin-left: 500px;">Driver Score</h2>
+        <img style="height: 400px; width: 900px; margin-left: 100px;" src="image/pp.png">
+    </div>
+</div>
+<div class="dic" >
+    <footer>
+        <div style="height: 100px; width: 100%; ">
+            <div style="height: 40px; width: 30%; float: left; margin-left: 30px; margin-top: 10px;">
+                <p style="font-size: 12px;">Copyright &copy</p><br>
+                <p style="font-size: 12px";> All rights reserved </p>
+            </div>
+            <div align="center" style="height: 100px; width: 30%; float: left; margin-left: 30px; margin-top: 10px;">
+                <p style="font-size: 14px; font-weight: bold;">About Us</p>
+                <p style="font-size: 12px; margin-top: 10px">Privacy Policy</p>
+                <p style="font-size: 12px; margin-top: 5px">Terms & Condition</p>
+                <p style="font-size: 12px; margin-top: 5px">Help</p>
+            </div>
+            <div align="right" style="height: 40px; width: 30%; float: right; margin-left: 30px; margin-top: 10px; margin-right: 20px;">
+                <p style="font-size: 14px; margin-top: 5px; font-weight: bold;">Contact Us</p>
+                <p style="font-size: 12px; margin-top: 10px;">Phone Number: 9818613211</p>
+                <p style="font-size: 12px; margin-top: 5px;">Address: Sorakhutte, Kathmandu</p>
+                <p style="font-size: 16px; margin-right: 15px; margin-bottom: 5px; margin-top: 10px;">Visit us</p>
+                <div style="height: 20px; width: 5%; float: right; margin-right: 10px;">
+                    <a href=""><img src="image/fac.png"></a>
+                </div>
+                <div style="height: 20px; width: 5%; float: right; margin-left: 10px; margin-right: 5px;">
+                    <a href=""><img src="image/insta.png"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

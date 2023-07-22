@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <body>
+    <br><label class="text">Username</label><br>
+                <form>
+              <input class="box" type="text" id="nam" required><br><br>
+              <label class="text">Password</label><br>
+              <input class="box" type="password" id="pass" required><br><br>
+              <input class="box1" type="submit" value="Submit" onclick="myFunc()">
+            </form>
+      <p id="test"></p>
+      <script>
+         function myFunc() {
+            if( document.getElementById("nam").value == "admin" && document.getElementById("pass").value == "admin"){
+                window.location.href="home.html"
+            }
+            else{
+                window.location.href="home.html"
+            }
+         }
+      </script>
+   </body>
+</html>

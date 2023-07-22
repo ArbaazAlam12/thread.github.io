@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='all.css'>
+    <script src='main.js'></script>
+    <style>
+        .bodye{
+            height: 200px;
+            width: 400px;
+            align-content: center;
+            display: flex;
+        }
+        .ainput{
+            width: 200px;
+            height: 30px;
+            border: 2px solid rgb(146, 146, 146);
+            border-radius: 3px;
+            margin-left: 30px;
+        }
+        button:hover{
+            opacity: 0.6;
+        }
+        .sty{
+            height: 200px;
+            width: 500px;
+            border-radius: 2px ;
+            box-shadow: 2px 3px 3px 3px rgb(141, 141, 141);
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .bts{
+            height: 40px;
+            width: 200px;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            border-radius: 4px;
+            margin-left: 30px;
+        }
+        button:hover{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="dcontainer">
+			<nav class="navbar">
+				<!-- Inside the navigation div there are three div in which first used for logo, second one for nav bar of pages and third for icons-->
+				<div class="logo"><!-- logo is inserted here-->
+					<a href="home.html"><img src="image/a.png"></a>
+				</div>
+				<div class="table">
+					<!--Using table tag the four page are created in one row-->
+					<table>
+						<tr>
+							<th><a href="home.html" class="current"> Home</th>
+							<th><a href="bookacab.html">Book Cab</th>
+							<th><a href="hirevehicle.html">Hire Vehicle</th>
+							<th><a href="joincourse.html">Join Traning Course</th>
+							<th><a href="">About Us</th>
+							
+						</tr>
+					</table>
+				</div>
+
+				<!--Using this div icon are inserted to signup, when signup icon is clicked it will link to sigup page-->
+				<div class="icon">
+					<div class="iconimg">
+						<a href=""><img src="image/search.png"></a>
+					</div>
+					<div class="iconimg">
+						<a href=""><img src="image/signup.png"></a>
+					</div>
+				</div>
+			</nav>
+    </div>
+	<div style="height: 600px;" >
+		<div class="bodye" style="margin-right: auto; margin-left: auto; margin-top: 30px;">
+            <div style="height: 150px; width: 150px;">
+                <img src="image/vv.jpg">
+            </div>
+            <div style="height: 150; width: 180px;">
+                <h2 style="opacity: 0.6; margin-top: 60px;">Hire a Vehicle</h2>
+            </div>
+        </div>
+        <div style="height: 50px; width: 1300px; margin-left: auto; margin-right: auto;">
+            <form>
+                <input class="ainput" placeholder="Vehicle Model">
+                <select style="width: 200px; height: 35px; margin-left: 20px;">
+                    <option value="1" >Vehicle type</option>
+                    <option value="2">Car</option>
+                    <option value="3">Motorcycle</option>
+                    <option value="3">Truck</option>
+                    <option value="4">Heavy Trucks</option>
+                    <option value="4">Cargo Ship</option>
+                </select>
+                <label style="margin-left: 20px; margin-right: -25px">Pickup date:</label>
+                <input class="ainput" type="datetime-local" id="Pickup Point" name="birthday">
+                <label style="margin-left: 20px; margin-right: -25px">Return date:</label>
+                <input class="ainput" type="datetime-local" id="birthday" name="birthday">
+                
+            </form>
+        </div>
+        <div style="margin-left: auto; margin-right: auto; height: 50px; width: 500px; margin-top: 50px;">
+            <button class="bts" onclick="myFunction()"> Hire Specialist Driver</button>
+            <button class="bts" onclick="myFunction1()">  Identification Document</button>
+        </div>
+        <div class="sty" id="div1" style="display: none;">
+            <div>
+                <form>
+                <select style="width: 200px; height: 35px; margin-left: 20px; margin-top: 30px;">
+                    <option value="1" >Driver Type</option>
+                    <option value="2">Car</option>
+                    <option value="3">Motorcycle</option>
+                    <option value="3">Truck</option>
+                    <option value="4">Heavy Trucks</option>
+                    <option value="4">Cargo Ship</option>
+                </select>
+                <input class="ainput" type="text" id="Pickup Point" placeholder="Number of hire days">
+                <button style="margin-left: 150px; height: 35px; width: 170px; background-color: black; color: white; border-radius: 3px; margin-top: 40px;">Submit</button>
+            </form>
+            </div>
+        </div>
+        
+        <div class="sty" id="div2" style="display: none;">
+            <div>
+            <form>
+                <select style="width: 200px; height: 35px; margin-left: 20px; margin-top: 30px;">
+                    <option value="1" >Document Type</option>
+                    <option value="2">License </option>
+                    <option value="3"> National Identification</option>
+                    <option value="3">Passport</option>
+                    <option value="4">College Id</option>>
+                </select>
+                <input style="margin-left: 30px; height: 35px; width: 200px;" type="file">
+                <button style="margin-left: 150px; height: 35px; width: 170px; background-color: black; color: white; border-radius: 3px; margin-top: 40px;">Submit</button>
+            </form>
+            </div>
+
+        </div>
+        <div style="height: 50px; width: 20px;">
+            <p id="demo"></p>
+         </div>
+        <div style="margin-top: 40px; height: 300px; width: 1000px; margin-left: auto; margin-right: auto;">
+            <h2 style="text-align: center; opacity: 0.7;">Payment Methods</h2>
+            <img style="margin-top: 30px;" src="image/ll.jpg">
+        </div>
+	</div>
+	<div class="dic">
+		<footer>
+			<div style="height: 100px; width: 100%;">
+				<div style="height: 40px; width: 30%; float: left; margin-left: 30px; margin-top: 10px;">
+					<p style="font-size: 12px;">Copyright &copy</p><br>
+					<p style="font-size: 12px";> All rights reserved </p>
+				</div>
+				<div align="center" style="height: 100px; width: 30%; float: left; margin-left: 30px; margin-top: 10px;">
+					<p style="font-size: 14px; font-weight: bold;">About Us</p>
+					<p style="font-size: 12px; margin-top: 10px">Privacy Policy</p>
+					<p style="font-size: 12px; margin-top: 5px">Terms & Condition</p>
+					<p style="font-size: 12px; margin-top: 5px">Help</p>
+				</div>
+				<div align="right" style="height: 40px; width: 30%; float: right; margin-left: 30px; margin-top: 10px; margin-right: 20px;">
+					<p style="font-size: 14px; margin-top: 5px; font-weight: bold;">Contact Us</p>
+					<p style="font-size: 12px; margin-top: 10px;">Phone Number: 9818613211</p>
+					<p style="font-size: 12px; margin-top: 5px;">Address: Sorakhutte, Kathmandu</p>
+					<p style="font-size: 16px; margin-right: 15px; margin-bottom: 5px; margin-top: 10px;">Visit us</p>
+					<div style="height: 20px; width: 5%; float: right; margin-right: 10px;">
+						<a href=""><img src="image/fac.png"></a>
+					</div>
+					<div style="height: 20px; width: 5%; float: right; margin-left: 10px; margin-right: 5px;">
+						<a href=""><img src="image/insta.png"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("div1");
+            x.style.display="block";
+        }
+        function myFunction1(){
+            var x = document.getElementById("div2");
+            x.style.display="block";
+        }
+
+    </script>
+</body>
+</html>

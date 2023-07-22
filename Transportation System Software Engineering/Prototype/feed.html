@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='all.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+    <script src='main.js'></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        .bodye{
+            height: 200px;
+            width: 400px;
+            align-content: center;
+            display: flex;
+        }
+        .ainput{
+            width: 200px;
+            height: 30px;
+            border: 2px solid rgb(146, 146, 146);
+            border-radius: 3px;
+            margin-left: 30px;
+        }
+        button:hover{
+            opacity: 0.6;
+        }
+        .sty{
+            height: 300px;
+            width: 1100px;
+            border-radius: 2px ;
+            box-shadow: 2px 3px 3px 3px rgb(141, 141, 141);
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        }
+        html,body{
+        display: grid;
+        height: 100%;
+        text-align: center;
+        background: white;
+        }
+        .container{
+        position: relative;
+        height: 400px;
+        width: 400px;
+        background: white;
+        padding: 20px 30px;
+        border: 1px solid #444;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-left: 500px;
+        }
+        .container .post{
+        display: none;
+        }
+        .container .text{
+        font-size: 25px;
+        color: #666;
+        font-weight: 500;
+        }
+        .container .edit{
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        font-size: 16px;
+        color: #666;
+        font-weight: 500;
+        cursor: pointer;
+        }
+        .container .edit:hover{
+        text-decoration: underline;
+        }
+        .container .star-widget input{
+        display: none;
+        }
+        .star-widget label{
+        font-size: 40px;
+        color: #444;
+        padding: 10px;
+        float: right;
+        transition: all 0.2s ease;
+        }
+        input:not(:checked) ~ label:hover,
+        input:not(:checked) ~ label:hover ~ label{
+        color: rgb(139, 137, 137);
+        opacity: 0.5;
+        }
+        input:checked ~ label{
+        color:rgb(118, 118, 118);
+        }
+        input#rate-5:checked ~ label{
+        color: rgb(90, 89, 89);
+        text-shadow: 0 0 20px black;
+        }
+        #rate-1:checked ~ form header:before{
+        content: "I just hate it ";
+        }
+        #rate-2:checked ~ form header:before{
+        content: "I don't like it";
+        }
+        #rate-3:checked ~ form header:before{
+        content: "It is awesome ";
+        }
+        #rate-4:checked ~ form header:before{
+        content: "I just like it ";
+        }
+        #rate-5:checked ~ form header:before{
+        content: "I just love it ";
+        }
+        .container form{
+        display: none;
+        }
+        input:checked ~ form{
+        display: block;
+        }
+        form header{
+        width: 100%;
+        font-size: 25px;
+        color: black;
+        font-weight: 500;
+        margin: 5px 0 20px 0;
+        text-align: center;
+        transition: all 0.2s ease;
+        }
+        form .textarea{
+        height: 100px;
+        width: 100%;
+        overflow: hidden;
+        }
+        form .textarea textarea{
+        height: 100%;
+        width: 100%;
+        outline: none;
+        color: #262424;
+        border: 1px solid #333;
+        background: #fffcfc;
+        padding: 10px;
+        font-size: 17px;
+        resize: none;
+        }
+        .textarea textarea:focus{
+        border-color: #444;
+        }
+        form .btn{
+        height: 45px;
+        width: 100%;
+        margin: 15px 0;
+        }
+        form .btn button{
+        height: 100%;
+        width: 100%;
+        border: 1px solid #6c6c6c;
+        outline: none;
+        background: #666666;
+        color: #030303;
+        font-size: 17px;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        }
+        form .btn button:hover{
+        background: #aaa9a9;
+        }
+    </style>
+</head>
+<body>
+    <div class="dcontainer">
+			<nav class="navbar">
+				<!-- Inside the navigation div there are three div in which first used for logo, second one for nav bar of pages and third for icons-->
+				<div class="logo"><!-- logo is inserted here-->
+					<a href="home.html"><img src="image/a.png"></a>
+				</div>
+				<div class="table">
+					<!--Using table tag the four page are created in one row-->
+					<table>
+						<tr>
+							<th><a href="home.html" class="current"> Home</th>
+							<th><a href="html/shop.html">Book Cab</th>
+							<th><a href="html/blog.html">Hire Vehicle</th>
+							<th><a href="html/Research.html">Join Traning Course</th>
+							<th><a href="html/Research.html">About Us</th>
+							
+						</tr>
+					</table>
+				</div>
+
+				<!--Using this div icon are inserted to signup, when signup icon is clicked it will link to sigup page-->
+				<div class="icon">
+					<div class="iconimg">
+						<a href=""><img src="image/search.png"></a>
+					</div>
+					<div class="iconimg">
+						<a href=""><img src="image/signup.png"></a>
+					</div>
+				</div>
+			</nav>
+    </div>
+	<div class="container">
+        <div class="post">
+          <div class="text">Thanks for rating us!</div>
+          <div class="edit">EDIT</div>
+        </div>
+        <div class="star-widget">
+          <input type="radio" name="rate" id="rate-5">
+          <label for="rate-5" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-4">
+          <label for="rate-4" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-3">
+          <label for="rate-3" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-2">
+          <label for="rate-2" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-1">
+          <label for="rate-1" class="fas fa-star"></label>
+          <form action="#">
+            <header></header>
+            <div class="textarea">
+              <textarea cols="30" placeholder="Describe your experience.."></textarea>
+            </div>
+            <div class="btn">
+              <button type="submit">Post</button>
+            </div>
+          </form>
+        </div>
+      </div>
+	<div class="dic" style="margin-top: 100px;">
+		<footer>
+			<div style="height: 100px; width: 100%; " >
+				<div style="height: 40px; width: 30%; float: left; margin-left: 30px; margin-top: 10px;">
+					<p style="font-size: 12px;">Copyright &copy</p><br>
+					<p style="font-size: 12px";> All rights reserved </p>
+				</div>
+				<div align="center" style="height: 100px; width: 30%; float: left; margin-left: 30px; margin-top: 10px;">
+					<p style="font-size: 14px; font-weight: bold;">About Us</p>
+					<p style="font-size: 12px; margin-top: 10px">Privacy Policy</p>
+					<p style="font-size: 12px; margin-top: 5px">Terms & Condition</p>
+					<p style="font-size: 12px; margin-top: 5px">Help</p>
+				</div>
+				<div align="right" style="height: 40px; width: 30%; float: right; margin-left: 30px; margin-top: 10px; margin-right: 20px;">
+					<p style="font-size: 14px; margin-top: 5px; font-weight: bold;">Contact Us</p>
+					<p style="font-size: 12px; margin-top: 10px;">Phone Number: 9818613211</p>
+					<p style="font-size: 12px; margin-top: 5px;">Address: Sorakhutte, Kathmandu</p>
+					<p style="font-size: 16px; margin-right: 15px; margin-bottom: 5px; margin-top: 10px;">Visit us</p>
+					<div style="height: 20px; width: 5%; float: right; margin-right: 10px;">
+						<a href=""><img src="image/fac.png"></a>
+					</div>
+					<div style="height: 20px; width: 5%; float: right; margin-left: 10px; margin-right: 5px;">
+						<a href=""><img src="image/insta.png"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+    <script>
+        const btn = document.querySelector("button");
+        const post = document.querySelector(".post");
+        const widget = document.querySelector(".star-widget");
+        const editBtn = document.querySelector(".edit");
+        btn.onclick = ()=>{
+          widget.style.display = "none";
+          post.style.display = "block";
+          editBtn.onclick = ()=>{
+            widget.style.display = "block";
+            post.style.display = "none";
+          }
+          return false;
+        }
+      </script>
+</body>
+</html>
